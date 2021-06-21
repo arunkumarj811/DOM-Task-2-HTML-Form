@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form onsubmit="myFunction();return false">
+        <!-- the return false statement prevents the form from refreshing and clearing the entering data before other function executes -->
+
+        <fieldset>
+            <legend>Name:</legend>
+            <div>
+                <input type="text" id="fname" name="fname" required><br>
+                <label for="fname">First name</label>
+            </div>
+            <div><input type="text" id="lname" name="lname" required><br>
+                <label for="lname">Last name</label>
+            </div>
+            <div>
+                <select name="gender" id="gender" required>
+                    <option value="" disabled selected hidden>Choose</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select><br>
+                <label for="gender" placeholder="">Gender</label>
+            </div>
+        </fieldset>
+        <div>
+            <label for="address">Address: </label>
+            <input type="text" id="address" name="address" required>
+
+            <br> <label for="pincode">Pincode:  </label>
+            <input type="number" id="pincode" name="pincode" required>
+        </div>
+
+        <div class="country">
+            <div>
+            <label for="country">Country: </label>
+            <input list="mycountries" name="country" id="country" required>
+            <datalist id="mycountries">
+                <!-- JS will fill the datalist with options(all country names) using API -->
+            </datalist>
+        </div>
+        <div>
+            <label for="state">State: </label>
+            <input list="mystate" name="state" id="state" required>
+            <datalist id="mystate">
+                <!-- JS will fill the datalist with options(all state names of respective choosed country) using API -->
+            </datalist>
+        </div>
+        </div>
+
+        <div class="food">
+            <p> Choose atleast two of your favorite food</p>
+            <input type="checkbox" id="food1" name="food" value="Pizza">
+            <label for="food1"> Pizza</label><br>
+            <input type="checkbox" id="food2" name="food" value="Pasta">
+            <label for="food2"> Pasta</label><br>
+            <input type="checkbox" id="food3" name="food" value="Hamburger">
+            <label for="food3"> Hamburger</label><br>
+            <input type="checkbox" id="food4" name="food" value="Soup">
+            <label for="food4"> Soup</label><br>
+            <input type="checkbox" id="food5" name="food" value="Salad">
+            <label for="food5"> Salad</label><br>
+        </div>
+
+        <input type="submit" value="Submit" >
+    </form>
+    <div class="table">
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Pincode</th>
+                <th>Country</th>
+                <th>State</th>
+                <th>Food</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- the append data of form from JS goes here -->
+        </tbody>
+    </table>
+</div>
+<div id="button">
+<button type="button" onclick="clearTable()">Clear Table</button>
+</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

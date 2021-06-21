@@ -1,0 +1,142 @@
+body{
+    background-color:burlywood;
+    padding: 0;
+    font-family: sans-serif, Arial, Helvetica;
+    position: relative;
+}
+
+form{
+    width:60%;
+    margin: 0 auto;
+    font-weight:bold;
+}
+.food label{
+    font-weight:500;
+}
+fieldset {
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;
+}
+fieldset>div{
+    padding:0;
+}
+fieldset input{
+    min-width:300px;
+    height:20px;
+    font-size: 14px;
+}
+fieldset select{
+    width:100px;
+    height: 30px;
+}
+fieldset label{
+    font-size: 14px;
+    color:rgb(105, 105, 18);
+}
+.country{
+    display:flex;
+    gap:20px;
+    flex-wrap: wrap;
+}
+.country div{
+    margin:0;
+    padding: 0;
+    
+}
+input{
+    padding: 3px;
+}
+input[type="submit"]{
+    padding: 5px;
+    width: 75px;
+    font-weight:600;
+    background-color:lightblue;
+    margin:10px;
+}
+input[type="submit"]:hover{
+    width:85px;
+    box-shadow:  2px 2px 2px 1px lightslategrey;
+}
+
+div{
+    padding:10px;
+    /* border:1px solid black; */
+}
+
+table{
+    display:block;
+    visibility:hidden;
+    width:80%;
+    /* overflow-y: scroll; */
+    overflow-x: auto;
+    margin:0 auto;
+    border:1px solid grey;
+    /* border-collapse: collapse; */
+    background-color: rgb(201, 206, 207);
+    border-radius: 10px
+}
+.table{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin:0 auto;
+}
+tr, th, td{
+    border:1px solid grey;
+    border-radius: 10px;
+    color:rgb(80, 77, 77);
+    font-weight:500;
+}
+tr:nth-child(even){
+    background-color: rgb(137, 194, 167);
+}
+tr:nth-child(odd){
+    background-color: rgb(165, 231, 209);
+}
+th {background-color:turquoise;
+    color:rgb(80, 77, 77);
+    font-weight:bold;
+}
+tr:hover {background-color: #7fb6cc;}
+
+th, td{
+    min-width:130px;
+    max-width:200px;
+    overflow-wrap: break-word;
+    padding:5px;
+}
+th:nth-child(4), td:nth-child(4){
+    min-width: 150px;
+}
+
+#address{
+    min-width:60%;
+    max-width: 100%;
+    height:40px;
+    margin-bottom:10px;
+    font-size: 14px;
+}
+
+button[type="button"]{
+    padding: 5px;
+    width: auto;
+    font-weight:600;
+    background-color:lightblue;
+    margin:10px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+button:hover {background-color: khaki;
+    box-shadow:  2px 2px 2px 1px lightslategrey;}
+#button{
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    form, table {
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
